@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'
+import {HashRouter, Route, Switch} from 'react-router-dom'
+import HookApi from './container/HookApi'
+import Demo from './container/Demo'
+import Interview from './container/Interview'
+import Test from './container/Test'
+import Sort from "./container/Sort"
+
 import './App.css';
-
-function App() {
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <HashRouter>
+        <Switch>
+          <Route path="/" component={HookApi} exact/>
+          <Route path="/demo" component={Demo}/>
+          <Route path="/interview" component={Interview}/>
+          <Route path="/test" component={Test}/>
+          <Route path="/sort" component={Sort}/>
+        </Switch>
+      </HashRouter>
+    </React.Fragment>
+  )
 }
-
-export default App;
