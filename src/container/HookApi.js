@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext, useReducer, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useEffect, useContext, createContext, useReducer, useRef, useImperativeHandle } from 'react';
 import {Button } from 'antd'
 
 const context = createContext()
@@ -37,10 +37,9 @@ function FancyInput(props, ref) {
     }))
     return <input ref={inputRef}/>
 }
-FancyInput = forwardRef(FancyInput)
+FancyInput = React.forwardRef(FancyInput)
 
 function App() {
-  // const [count, setCount ] = useState(0)
   const [{count}, dispatch] = useReducer(reducer, initialState)
   const refSub = useRef(null)
   const inputEl = useRef(null)
@@ -59,7 +58,6 @@ function App() {
   return (
     <div className="App">
       <p>{count}</p>
-      {/* <Button onClick={() => setCount(count + 1)}>点击增加1</Button> */}
       <Button onClick={() => dispatch({type: 'INCREASE'})}>增加1</Button>
       <Button onClick={() => dispatch({type: 'DECREMENT'})}>减少1</Button>
       <Button onClick={onButtonClick}>聚焦</Button>
