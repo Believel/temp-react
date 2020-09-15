@@ -1,7 +1,7 @@
 import React from "react";
 import { DatePicker, TimePicker, Space } from "antd";
 import dayjs from "dayjs";
-import "./dayjs";
+import "./dayjs.js";
 import "./lodash.ts";
 const { RangePicker } = DatePicker;
 const Demo = () => {
