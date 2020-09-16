@@ -2,6 +2,7 @@ import React from "react";
 import { DatePicker, TimePicker, Space } from "antd";
 import dayjs from "dayjs";
 import "./dayjs.js";
+import "./lodash-demo.js";
 const { RangePicker } = DatePicker;
 const Demo = () => {
     const handleDateChange = (date, dateString) => {
