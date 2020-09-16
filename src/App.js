@@ -3,7 +3,8 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 import HookApi from './container/HookApi'
 import HeimdallForm from './container/HeimdallForm'
 // 懒加载
-const Demo = lazy(() => import(/* webpackChunkName: "demo" */ "./container/demo/dayjs.jsx"))
+// const Demo = lazy(() => import(/* webpackChunkName: "demo" */ "./container/demo/dayjs.jsx"))
+import Demo from "./container/demo/dayjs.jsx";
 export default () => {
   return (
     <React.Fragment>
