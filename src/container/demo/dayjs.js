@@ -102,4 +102,4 @@ const getClasssName = (result) => {
     })
     return cls;
 }
-  diffTime();
+diffTime();
