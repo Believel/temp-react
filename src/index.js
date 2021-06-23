@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import {get} from "lodash";
+const obj = {};
+
+console.log(get(obj, "name"))
+
 // <React.StrictMode>
 ReactDOM.render(
     <App />,

@@ -14,11 +14,11 @@ export default () => {
       <HashRouter>
         <Switch>
           <Route path="/a" component={HookApi} exact/>
-          <Route path="/" component={HeimdallForm} exact/>
+          <Route path="/form" component={HeimdallForm} exact/>
           <Route path="/demo" component={Demo} exact/>
           <Route path="/recoil" component={RecoilDemo}  exact/>
           <Route path="/stat" component={Stat} exact />
-          <Route path="/cart" component={Cart} exact />
+          <Route path="/" component={Cart} exact />
         </Switch>
       </HashRouter>
     </React.Fragment>
